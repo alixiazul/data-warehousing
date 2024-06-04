@@ -1,0 +1,113 @@
+You are now connected to database "ncstaffsql" as user "alicia".
+DROP TABLE
+DROP TABLE
+CREATE TABLE
+ staff_id | first_name |   last_name    | mentees | mentees_staff_rating | daily_rate 
+----------+------------+----------------+---------+----------------------+------------
+        1 | Alex       | Swain          |      11 |                   10 |     700.98
+        2 | Stephen    | Corke          |       0 |                    8 |     600.28
+        3 | Verity     | Gregory        |      13 |                    9 |     578.26
+        4 | Simon      | Jackson        |      18 |                    2 |      12.99
+        5 | Paul       | Copley         |       0 |                    9 |        699
+        6 | Paul       | Rogerson       |       0 |                    4 |     150.01
+        7 | John       | Hutcheon       |       9 |                    7 |     200.67
+        8 | Jodie      | Cheung         |       9 |                    7 |     400.05
+        9 | Pippa      | Austin         |      10 |                    8 |     400.04
+       10 | Bela       | Bertalan       |      11 |                    6 |     370.89
+       11 | Emily      | Bennett        |       6 |                    7 |     550.35
+       12 | Mezz       | Davies         |      12 |                    7 |     548.33
+       13 | Danika     | Crawley        |       8 |                    9 |     698.99
+       14 | August     | Aldred         |      13 |                    8 |     439.09
+       15 | Lee        | Kirkham        |      14 |                    5 |     421.89
+       16 | Hev        | Magnier-Ashton |       9 |                    5 |     511.45
+       17 | Eli        | Wiggins        |      11 |                    8 |     588.88
+       18 | Kyle       | McPhail        |       7 |                    5 |     199.99
+       19 | Katherine  | Hurst          |      10 |                    8 |     665.35
+       20 | David      | Bartlett       |       2 |                    3 |      89.98
+       21 | Chon       | Lee            |      15 |                    4 |      50.67
+(21 rows)
+
+INSERT 0 21
+DROP TABLE
+CREATE TABLE
+ manager_id |    manager     | first_name | last_name 
+------------+----------------+------------+-----------
+          1 | Paul Rogerson  | Paul       | Rogerson
+          2 | James Heggs    | James      | Heggs
+          3 | Sam Caine      | Sam        | Caine
+          4 | Rose Mullan    | Rose       | Mullan
+          5 | Stephen Corke  | Stephen    | Corke
+          6 | Joe Mulvey     | Joe        | Mulvey
+          7 | Alex Swain     | Alex       | Swain
+          8 | August Aldred  | August     | Aldred
+          9 | David Bartlett | David      | Bartlett
+(9 rows)
+
+INSERT 0 9
+DROP TABLE
+CREATE TABLE
+ course_id |  course  
+-----------+----------
+         1 | Cloud
+         2 | Data
+         3 | Software
+(3 rows)
+
+INSERT 0 3
+DROP TABLE
+CREATE TABLE
+ next_cohort_date_id | next_cohort_date | next_cohort_day | next_cohort_month_text | next_cohort_month_number | next_cohort_quarter | next_cohort_year 
+---------------------+------------------+-----------------+------------------------+--------------------------+---------------------+------------------
+                   1 | 03 March 2024    |               3 | March                  |                        3 |                   1 |             2024
+                   2 | 03 November 2024 |               3 | November               |                       11 |                   4 |             2024
+                   3 | 12 January 2024  |              12 | January                |                        1 |                   1 |             2024
+                   4 | 12 May 2024      |              12 | May                    |                        5 |                   2 |             2024
+                   5 | 13 April 2024    |              13 | April                  |                        4 |                   2 |             2024
+                   6 | 17 December 2024 |              17 | December               |                       12 |                   4 |             2024
+                   7 | 17 January 2024  |              17 | January                |                        1 |                   1 |             2024
+                   8 | 17 October 2024  |              17 | October                |                       10 |                   4 |             2024
+                   9 | 24 August 2024   |              24 | August                 |                        8 |                   3 |             2024
+                  10 | 24 February 2024 |              24 | February               |                        2 |                   1 |             2024
+                  11 | 24 July 2024     |              24 | July                   |                        7 |                   3 |             2024
+                  12 | 24 June 2024     |              24 | June                   |                        6 |                   2 |             2024
+                  13 | 24 March 2024    |              24 | March                  |                        3 |                   1 |             2024
+(13 rows)
+
+INSERT 0 13
+DROP TABLE
+CREATE TABLE
+ area_id |    area    
+---------+------------
+       1 | Leeds
+       2 | Manchester
+       3 | Remote
+(3 rows)
+
+INSERT 0 3
+CREATE TABLE
+ revenue_id | revenue | staff_fk | manager_fk | course_fk | date_fk | area_fk 
+------------+---------+----------+------------+-----------+---------+---------
+          1 | 5484.57 |       15 |          9 |         3 |       7 |       1
+          2 | 7128.29 |       12 |          9 |         3 |       6 |       1
+          3 | 1709.62 |       20 |          4 |         3 |       5 |       1
+          4 |  168.87 |        4 |          7 |         2 |       3 |       1
+          5 | 1950.13 |        6 |          3 |         3 |      12 |       2
+          6 | 2608.71 |        7 |          8 |         3 |      11 |       2
+          7 | 7803.64 |        2 |          1 |         3 |      10 |       2
+          8 | 5200.65 |        8 |          8 |         3 |       9 |       2
+          9 | 5708.17 |       14 |          1 |         3 |       9 |       2
+         10 | 4821.57 |       10 |          8 |         3 |       8 |       2
+         11 | 6648.85 |       16 |          4 |         3 |       7 |       2
+         12 | 5200.52 |        9 |          8 |         3 |       5 |       2
+         13 | 8649.55 |       19 |          5 |         3 |       5 |       2
+         14 | 9086.87 |       13 |          6 |         2 |       4 |       2
+         15 |  658.71 |       21 |          6 |         2 |       4 |       2
+         16 |    9087 |        5 |          1 |         2 |       4 |       2
+         17 | 2599.87 |       18 |          6 |         2 |       3 |       2
+         18 | 7154.55 |       11 |          2 |         1 |       2 |       2
+         19 | 7655.44 |       17 |          2 |         1 |       1 |       2
+         20 | 7517.38 |        3 |          5 |         3 |      13 |       3
+         21 | 9112.74 |        1 |          6 |         2 |       3 |       3
+(21 rows)
+
+INSERT 0 21
